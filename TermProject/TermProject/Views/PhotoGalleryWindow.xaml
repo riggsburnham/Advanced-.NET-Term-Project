@@ -1,0 +1,229 @@
+﻿<Window x:Class="TermProject.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="{Binding MainWindowHeight, Mode=TwoWay}" 
+        Width="{Binding MainWindowWidth, Mode=TwoWay}" 
+        Background="#2B2A30"
+        DataContext="{StaticResource PhotoGalleryViewModel}">
+    <Window.Resources>
+        <Style TargetType="ScrollBar">
+            <Setter Property="Opacity" Value="0.5"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#2B2A30"></Setter>
+            <Setter Property="BorderBrush" Value="#38363E"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="LightGray"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions> <!--10 columns-->
+        <Grid Grid.Column="0"
+              Grid.ColumnSpan="2">   <!--Plugins grid-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions> <!--4 rows-->
+            <Border Background="#1E1D21"
+                    BorderBrush="#38363E"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Margin="5,5,5,2.5"
+                    BorderThickness="1">
+                <Grid>
+                    <StackPanel>
+                        <DockPanel HorizontalAlignment="Center">
+                            <TextBlock DockPanel.Dock="Top"
+                                       Text="Plugins"
+                                       Foreground="LightGray"></TextBlock>
+                        </DockPanel>
+                        <Button Height="20" Margin="5,2.5,5,2.5"
+                                Command="{Binding LoadBingImagesCommand}">
+                            <TextBlock Text="Bing"></TextBlock>
+                            <Button.ToolTip>Load Bing images</Button.ToolTip>
+                        </Button>
+                        <Button Height="20" Margin="5,2.5,5,2.5"
+                                Command="{Binding LoadRedditImagesCommand}">
+                            <TextBlock Text="Reddit"></TextBlock>
+                            <Button.ToolTip>Load Reddit images</Button.ToolTip>
+                        </Button>
+                        <Button Height="20" Margin="5,2.5,5,2.5"
+                                Command="{Binding ShowJikanPopupWindowCommand}">
+                            <TextBlock Text="Jikan"></TextBlock>
+                            <Button.ToolTip>Load anime pictures by characters or by anime</Button.ToolTip>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Margin="5,2.5,5,5"
+                    Background="#1E1D21"
+                    BorderBrush="#38363E">
+                <DockPanel LastChildFill="True">
+                    <TextBlock DockPanel.Dock="Top"
+                               Text="Local Files"
+                               Foreground="LightGray"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <Button DockPanel.Dock="Bottom"
+                            Height="20" Margin="5,5,5,5"
+                            Command="{Binding AddLocalDirectoryCommand}">
+                        <TextBlock Text="Add"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"></TextBlock>
+                        <Button.ToolTip>Add a local directory to load images from</Button.ToolTip>
+                    </Button>
+                    <ListBox Margin="5,2.5,5,2.5"
+                             Background="#2B2A30"
+                             BorderThickness="0"
+                             ItemsSource="{Binding LocalDirectories}"
+                             x:Name="localDirectoriesIC"
+                             HorizontalContentAlignment="Center"
+                             IsSynchronizedWithCurrentItem="True">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction
+                                    Command="{Binding LoadLocalImagesCommand}"
+                                    CommandParameter="{Binding ElementName=localDirectoriesIC, Path=SelectedValue}">
+                                </i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Height="20"
+                                           Margin="0,2.5,0,2.5"
+                                           Text="{Binding DirectoryName}"
+                                           Foreground="LightGray"></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="2"
+              Grid.ColumnSpan="6"
+              x:Name="PhotoGrid">
+            <!--PhotoGallery Grid-->
+            <Border Grid.ColumnSpan="6"
+                    Margin="2.5,5,2.5,5"
+                    BorderBrush="#38363E"
+                    BorderThickness="1">
+                <DockPanel>
+                    <TextBlock Text="Gallery"
+                               HorizontalAlignment="Stretch"
+                               TextAlignment="Center"
+                               Foreground="LightGray"
+                               Background="#1E1D21"
+                               VerticalAlignment="Top"
+                               DockPanel.Dock="Top">
+                    </TextBlock>
+                    <Grid>
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                      BorderThickness="0">
+                            <ListBox ItemsSource="{Binding Images}"
+                                     Background="#2B2A30"
+                                     x:Name="ImagesLB"
+                                     HorizontalContentAlignment="Center"
+                                     VerticalContentAlignment="Center"
+                                     BorderThickness="0">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding SelectedImageChangedCommand}"
+                                            CommandParameter="{Binding ElementName=ImagesLB, Path=SelectedItem}">
+                                        </i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="MouseDoubleClick">
+                                        <i:InvokeCommandAction
+                                            Command="{Binding ViewSelectedImageFullSizeCommand}"
+                                            CommandParameter="{Binding ElementName=ImagesLB, Path=SelectedItem}">
+                                        </i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel ItemWidth="{Binding PhotoGalleryImageWidth}"
+                                                   ItemHeight="{Binding PhotoGalleryImageWidth}"
+                                                   Width="{Binding PhotoGalleryWrapPanelWidth}">
+                                        </WrapPanel>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Background="#1E1D21"
+                                                BorderBrush="#38363E">
+                                            <Image Source="{Binding URL}"></Image>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </ScrollViewer>
+                    </Grid>
+                </DockPanel>
+            </Border>
+            
+        </Grid> 
+        <Grid Grid.Column="8"
+              Grid.ColumnSpan="2">    <!--Details grid-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>  <!--5 rows-->
+            <Border Grid.Row="0" 
+                    Grid.RowSpan="5"
+                    Margin="5,5,5,5"
+                    Background="#1E1D21"
+                    BorderBrush="#38363E"
+                    BorderThickness="1">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <DockPanel Margin="5,5,5,5">
+                            <TextBlock Text="Details"
+                                       Foreground="LightGray"
+                                       DockPanel.Dock="Top"
+                                       HorizontalAlignment="Center"></TextBlock>
+                            <ItemsControl ItemsSource="{Binding SelectedImageDetails}"
+                                          Background="#1E1D21"
+                                          BorderThickness="0"
+                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock TextWrapping="Wrap"
+                                                       Text="{Binding}"
+                                                       Foreground="LightGray"></TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DockPanel>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

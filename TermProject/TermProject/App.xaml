@@ -1,0 +1,10 @@
+﻿<Application x:Class="Lab4.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Lab4"
+             xmlns:viewModels="clr-namespace:TermProject.ViewModels"
+             StartupUri="Views/PhotoGalleryWindow.xaml">
+    <Application.Resources>
+         <viewModels:PhotoGalleryViewModel x:Key="PhotoGalleryViewModel"/>
+    </Application.Resources>
+</Application>

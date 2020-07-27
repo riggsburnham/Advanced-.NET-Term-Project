@@ -1,0 +1,9 @@
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\ILibrary\bin\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\ILibrary\bin\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\ILibrary\obj\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\ILibrary\obj\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\ILibrary\bin\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\ILibrary\bin\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\ILibrary\obj\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\ILibrary\obj\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\ILibrary\obj\Debug\ILibrary.csprojAssemblyReference.cache

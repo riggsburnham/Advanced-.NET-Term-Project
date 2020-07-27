@@ -1,0 +1,11 @@
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\bin\Debug\netstandard2.0\JikanLibrary.deps.json
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\bin\Debug\netstandard2.0\JikanLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\bin\Debug\netstandard2.0\JikanLibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\bin\Debug\netstandard2.0\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\bin\Debug\netstandard2.0\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.csprojAssemblyReference.cache
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.AssemblyInfoInputs.cache
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.AssemblyInfo.cs
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.csproj.CopyComplete
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\JikanLibrary\obj\Debug\netstandard2.0\JikanLibrary.pdb

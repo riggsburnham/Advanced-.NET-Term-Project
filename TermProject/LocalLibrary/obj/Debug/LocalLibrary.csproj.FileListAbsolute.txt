@@ -1,0 +1,16 @@
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\bin\Debug\LocalLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\bin\Debug\LocalLibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\bin\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\bin\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\obj\Debug\LocalLibrary.csprojAssemblyReference.cache
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\obj\Debug\LocalLibrary.csproj.CopyComplete
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\obj\Debug\LocalLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Lab 4\Lab4\LocalLibrary\obj\Debug\LocalLibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\bin\Debug\LocalLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\bin\Debug\LocalLibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\bin\Debug\ILibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\bin\Debug\ILibrary.pdb
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\obj\Debug\LocalLibrary.csprojAssemblyReference.cache
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\obj\Debug\LocalLibrary.csproj.CopyComplete
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\obj\Debug\LocalLibrary.dll
+C:\Users\riggs\Documents\School Work\OIT\Senior\CST 407 - Advanced .NET\Labs\Term Project\TermProject\LocalLibrary\obj\Debug\LocalLibrary.pdb
